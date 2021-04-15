@@ -18,8 +18,7 @@
 def count_letters(input: str):
     # create a hashmap of all the letters in alphabet
     letters = "abcdefghijklmnopqrstuvwxyz"
-    letterMap = {}
-
+    letterMap: dict = {}
     # O(1 * n)
     for letter in input.lower():
         if letter.is_alpha():
