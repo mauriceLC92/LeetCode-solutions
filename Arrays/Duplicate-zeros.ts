@@ -1,5 +1,5 @@
 /**
- Do not return anything, modify arr in-place instead.
+    Do not return anything, modify arr in-place instead.
  */
 function duplicateZeros(arr: number[]): void {
   let amountOfZeros = arr.filter((num) => num === 0).length;
