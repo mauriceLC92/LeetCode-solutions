@@ -2,4 +2,4 @@
 
 My solutions to various LeetCode problems.
 
-Solutions completed mainly completed in TypeScript but a solutions in Python also added.
+Solutions completed mainly in TypeScript but Python solutions will be provided over time.

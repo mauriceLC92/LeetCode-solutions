@@ -66,4 +66,24 @@ const insertionSort = (arr: number[], val: number): number[] => {
   return arr;
 };
 
-console.log("", insertionSort(lottoNumbers, 4));
+// console.log("", insertionSort(lottoNumbers, 4));
+
+// let myName = "Maurice";
+
+// function sayHey() {
+//   console.log("hello ", myName);
+// }
+
+// sayHey();
+
+function greetMe() {
+  let myName = "Maurice";
+
+  function sayHey() {
+    console.log("hello ", myName);
+  }
+
+  sayHey();
+}
+
+greetMe();
