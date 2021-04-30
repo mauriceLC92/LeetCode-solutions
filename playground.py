@@ -1,28 +1,23 @@
-# hello = "word"
+arr = [6, 10, 14, 20]
+target = 12
 
-# for num, letter in enumerate(hello):
-#     print(letter, num)
+arr.append(12)
 
-# if True:
-#     print("Well i am here now ")
+maxArrIndex = len(arr) - 1
 
-# myName = "Maurice"
+while maxArrIndex >= 0:
+    if maxArrIndex == 0:
+        break
+    elif arr[maxArrIndex] < arr[maxArrIndex - 1]:
+        current_value = arr[maxArrIndex]
+        val_on_left = arr[maxArrIndex - 1]
 
+        arr[maxArrIndex] = val_on_left
+        arr[maxArrIndex - 1] = current_value
 
-# def greeting():
-#     print("Hello {}".format(myName))
+    elif arr[maxArrIndex] >= arr[maxArrIndex - 1]:
+        break
 
+    maxArrIndex -= 1
 
-# greeting()
-
-
-def greetMe():
-    myName = "Maurice"
-
-    def greeting():
-        print("Hello {}".format(myName))
-
-    greeting()
-
-
-greetMe()
+print(arr)
