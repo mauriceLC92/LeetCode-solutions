@@ -1,4 +1,4 @@
-def insertion_sort(arr, target):
+def insertion_sorrted_array(arr, target):
     arr.append(target)
 
     maxArrIndex = len(arr) - 1
@@ -23,5 +23,5 @@ arr = [6, 10, 14, 20]
 target = 12
 
 print("Before", arr)
-insertion_sort(arr, target)
+insertion_sorrted_array(arr, target)
 print("After", arr)
