@@ -21,3 +21,17 @@ while maxArrIndex >= 0:
     maxArrIndex -= 1
 
 print(arr)
+
+
+my_string = "hello"
+
+# Add spaces between each character in the string
+
+string_with_spaces = ""
+for letter in my_string:
+    string_with_spaces += "{} ".format(letter)
+
+print(string_with_spaces)
+
+
+static_array = ["one", "two", "three"]
