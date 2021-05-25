@@ -1,3 +1,6 @@
+from typing import Counter
+
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -81,3 +84,35 @@ class MyLinkedList:
 # obj.addAtTail(val)
 # obj.addAtIndex(index,val)
 # obj.deleteAtIndex(index)
+
+
+def detect_cyle_two_pointer(head):
+    if head is None:
+        return False
+
+    slow = head
+    fast = head.next
+
+    while slow != fast:
+        if fast is None or fast.next is None:
+            return False
+
+        slow = slow.next
+        fast = fast.next.next
+    return True
+
+
+def reverse_linked_list(head):
+
+    current_node = head
+    previous_node = None
+
+    while current_node is not None:
+        next_node_temp = current_node.next
+
+        current_node.next = previous_node
+        previous_node = current_node
+
+        current_node = next_node_temp
+
+    return previous_node

@@ -14,5 +14,4 @@ def removeElements(head: ListNode, val: int) -> ListNode:
             current.next = current.next.next
         else:
             current = current.next
-    print(head)
     return head
