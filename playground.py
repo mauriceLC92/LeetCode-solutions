@@ -63,9 +63,21 @@ def count_items(arr: List[int]) -> int:
         return 1 + count_items(arr)
 
 
-test_arr = [20, 20, 202, 20]
+test_arr = [20, 20, 202, 20, 100, 456, 7]
 print("Items in array", count_items(test_arr))
 
 
 def maximum_number(arr: List[int]) -> int:
-    pass
+    arr_len = len(arr)
+    if arr_len == 1:
+        return arr[0]
+    else:
+        highest_value = arr[0]
+        last_value = arr.pop()
+        if last_value > highest_value:
+            arr[0] = last_value
+        return maximum_number(arr)
+
+
+test_arr = [20, 20, 202, 20, 100, 456, 7]
+print("Highest value in array", maximum_number(test_arr))
