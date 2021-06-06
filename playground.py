@@ -81,20 +81,3 @@ def maximum_number(arr: List[int]) -> int:
 
 test_arr = [20, 20, 202, 20, 100, 456, 7]
 print("Highest value in array", maximum_number(test_arr))
-
-
-def detect_cycle(head):
-    if head is None:
-        return False
-
-    slow = head
-    fast = head.next
-
-    while slow != fast:
-        if fast.next is None or fast.next is None:
-            return False
-
-        slow = slow.next
-        fast = fast.next.next
-
-    return True
