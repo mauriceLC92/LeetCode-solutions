@@ -116,3 +116,33 @@ def reverse_linked_list(head):
         current_node = next_node_temp
 
     return previous_node
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+def merge_two_sorted_list(l1: ListNode, l2: ListNode):
+
+    dummy = ListNode(-100)
+    tail = dummy
+
+    curr_one = l1
+    curr_two = l2
+
+    while curr_one and curr_two:
+        if curr_one.val < curr_two.val:
+            tail.next = curr_one
+            curr_one = curr_one.next
+        else:
+            tail.next = curr_two
+            curr_two = curr_two.next
+        tail = tail.next
+
+    if l1:
+        tail.next = l1
+    elif l2:
+        tail.next = l2
+    return dummy.next
