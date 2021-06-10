@@ -8,20 +8,20 @@ arr.append(12)
 
 maxArrIndex = len(arr) - 1
 
-while maxArrIndex >= 0:
-    if maxArrIndex == 0:
-        break
-    elif arr[maxArrIndex] < arr[maxArrIndex - 1]:
-        current_value = arr[maxArrIndex]
-        val_on_left = arr[maxArrIndex - 1]
+# while maxArrIndex >= 0:
+# if maxArrIndex == 0:
+#     break
+# elif arr[maxArrIndex] < arr[maxArrIndex - 1]:
+#     current_value = arr[maxArrIndex]
+#     val_on_left = arr[maxArrIndex - 1]
 
-        arr[maxArrIndex] = val_on_left
-        arr[maxArrIndex - 1] = current_value
+#     arr[maxArrIndex] = val_on_left
+#     arr[maxArrIndex - 1] = current_value
 
-    elif arr[maxArrIndex] >= arr[maxArrIndex - 1]:
-        break
+# elif arr[maxArrIndex] >= arr[maxArrIndex - 1]:
+#     break
 
-    maxArrIndex -= 1
+# maxArrIndex -= 1
 
 # print(arr)
 
@@ -81,3 +81,22 @@ def maximum_number(arr: List[int]) -> int:
 
 test_arr = [20, 20, 202, 20, 100, 456, 7]
 print("Highest value in array", maximum_number(test_arr))
+
+
+def quick_sort(arr):
+    arr_len = len(arr)
+
+    if arr_len < 2:
+        return arr
+    else:
+        # The pivot should be a random value to achieve the average case which is the best case
+        pivot = arr[0]
+        # Now we partition into a side less than the pivot vale and a side greater than the pivot value
+
+        less_than = [i for i in arr if i <= pivot]
+        greater_than = [i for i in arr if i > pivot]
+
+        return quick_sort(greater_than) + [pivot] + [less_than]
+
+
+my_set = {1, 2, 3, 4, 5, 7, 9}
